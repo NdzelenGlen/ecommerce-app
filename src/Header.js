@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import basket from './basket.png'
 import { Link } from 'react-router-dom'
 import { useStateValue } from './StatePrivider';
 // remember everything commented below needs to be edited later 
@@ -20,31 +21,32 @@ function Header() {
             <input
             className="header_searchinput" 
             type="text"/>
-            {/* {textsearch logo icon} */}
+            <img
+            src=""/>
 
 
         </div>
         <div className="header_nav">
-        <Link to ="">
+        <Link to ="/LogIn">
             <div className="header_option">
-               <span header_optionlineone>Welcome back</span>
-                <span header_optionlinetwo><center>LogIn</center></span>
+               <span className='header_optionlineone'>Welcome back</span>
+                <span className='header_optionlinetwo'><center>LogIn</center></span>
 
             </div>
 
         </Link>
          
-        <Link to ="">
+        <Link to ="/SignUp">
              <div className="header_option">
-                <span header_optionlineone>Guest?</span>
-                <span header_optionlinetwo>SignIn</span>
+                <span className='header_optionlineone'>Guest?</span>
+                <span className='header_optionlinetwo'>SignIn</span>
 
              </div>
         </Link>
         <Link to ="">
             <div className="header_option">
-                <span header_optionlineone>Returns</span>
-                <span header_optionlinetwo>& Orders</span>
+                <span className='header_optionlineone'>Returns</span>
+                <span className='header_optionlinetwo'>& Orders</span>
 
              </div>
 
@@ -52,8 +54,8 @@ function Header() {
              
         <Link to ="">
             <div className="header_option">
-               <span header_optionlineone>Your</span>
-                <span header_optionlinetwo>Prime</span>
+               <span className='header_optionlineone'>Your</span>
+                <span className='header_optionlinetwo'>Prime</span>
 
             </div>
 
@@ -61,8 +63,9 @@ function Header() {
             
         <Link to="/Basket">
             <div className="header_optionbasket">
-                {/* basketicon like save to cart basket */}
-                <span className="header_optionlineone header_basketcount">{basket?.length}</span>
+               <span> <img
+                src={basket}/></span>
+                <span className="header_basketcount">{basket?.length}</span>
             </div>
         </Link>
             
@@ -72,7 +75,7 @@ function Header() {
       
     </div>
     
-  )
+  );
 }
 
 export default Header

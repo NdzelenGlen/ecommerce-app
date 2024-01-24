@@ -1,5 +1,6 @@
 .subtotal{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
@@ -8,10 +9,14 @@
     background-color: lightgray;
     border: lightgrey;
     border-radius: 3px;
+    
 }
 .subtotal_text{
     display: flex;
     align-items: center;
+    color:green;
+    margin-top: 5px;
+    margin-bottom: 5px;
     
 }
 .subtotal button{

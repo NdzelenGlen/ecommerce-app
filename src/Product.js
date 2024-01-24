@@ -3,10 +3,10 @@ import "./Product.css"
 import { useStateValue } from './StatePrivider';
 import { Button } from '@mui/material'
 function Product({title , price , image , rating ,id }) {
-  const [{basket}, dispatch] = useStateValue();
-  
+
+const [{basket}, dispatch ] = useStateValue();
   const addToBasket =() => {
-   dispatch({
+  dispatch({
      type: "ADD_TO_BASKET",
      item:{
        id: id,

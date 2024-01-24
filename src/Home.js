@@ -16,13 +16,13 @@ function Home() {
        
        <div className="home_row">
         
-        <Product title="Thank you very much this was awsome but i will  having u back inn " 
+        <Product title="Thank hahah noo yes okay bye nice blala you very much this was awsome but i will  having u back inn " 
         price={65.6} 
         image={logo}
         rating={5}/>
         <Product/>
         <Product/>
-        <Product/>
+        
         
        </div>
        <div className="home_row">
