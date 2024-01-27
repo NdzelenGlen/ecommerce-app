@@ -1,8 +1,13 @@
 .basket{
     display: flex;
     padding: 20px;
-    background-color: white;
+    background-color: whitesmoke;
     height: max-content;
+    transition: padding 0.3s ease;
+    &:hover{
+        padding:50px;
+        box-shadow:0 0 50px rgba(5, 5, 56, 0.3);
+    }
 }
 .basket_ads{
     width: 100%;
@@ -11,12 +16,19 @@
 .basket_title{
     margin-right: 10px;
     padding: 10px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #148775;
+}
+.basket_title h2{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: #148775;
+
 }
 .basket_righthandside{
     
 
 }
 .basket_lefthandside{
+ 
 
 }

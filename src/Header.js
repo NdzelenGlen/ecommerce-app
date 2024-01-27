@@ -1,12 +1,21 @@
 import React from 'react'
 import './Header.css'
-import basket from './basket.png'
+import {ReactComponent as Basketicon} from './basket_icon.svg'
 import { Link } from 'react-router-dom'
-import { useStateValue } from './StatePrivider';
+import { useStateValue } from './StatePrivider'
+import {ReactComponent as SearchIcon} from './search.svg'
+import { auth } from './firebase.js'
 // remember everything commented below needs to be edited later 
 
 function Header() {
-    const [{basket}, dispatch] = useStateValue();
+    const [{basket, user }, dispatch] = useStateValue();
+
+    const handleAuthentication = () => {
+        if (user) {
+            auth.signOut();
+        }
+    }
+   
   return (
     
     <div className="header">
@@ -21,16 +30,19 @@ function Header() {
             <input
             className="header_searchinput" 
             type="text"/>
-            <img
-            src=""/>
+            <SearchIcon
+            className='header_searchicon'/>
 
 
         </div>
         <div className="header_nav">
-        <Link to ="/LogIn">
-            <div className="header_option">
-               <span className='header_optionlineone'>Welcome back</span>
-                <span className='header_optionlinetwo'><center>LogIn</center></span>
+        <Link to ={!user && '/LogIn'}>
+            <div onClick={handleAuthentication} 
+            className="header_option">
+               <span className='header_optionlineone'> {user?'Hi, ' : 'Welcome'}<b>{user?.name}</b> </span>
+                <center><span className='header_optionlinetwo'>
+                    {user?'LogOut' : 'LogIn'}
+                    </span></center>
 
             </div>
 
@@ -38,8 +50,8 @@ function Header() {
          
         <Link to ="/SignUp">
              <div className="header_option">
-                <span className='header_optionlineone'>Guest?</span>
-                <span className='header_optionlinetwo'>SignIn</span>
+                <span className='header_optionlineone'>{user?'' : 'Guest?'}</span>
+                <span className='header_optionlinetwo'>{user?'' : 'SignIn'}</span>
 
              </div>
         </Link>
@@ -63,8 +75,8 @@ function Header() {
             
         <Link to="/Basket">
             <div className="header_optionbasket">
-               <span> <img
-                src={basket}/></span>
+               <span> <Basketicon
+               className='header_optionbasketicon'  /></span>
                 <span className="header_basketcount">{basket?.length}</span>
             </div>
         </Link>

@@ -6,11 +6,18 @@
     z-index: 1;
     justify-content: flex-end;
     margin: 5px;
-    padding: 30px;
+    border-radius: 15px;
+    padding: 20px;
     width: 100%;
     min-width: 100px;
     max-height: 400px;
-    
+    box-shadow:0 0 15px rgba(5, 5, 56, 0.3);
+    transition: padding 0.3s ease;
+    &:hover{
+        padding:50px;
+        box-shadow:0 0 100px rgba(28, 1, 77, 0.3);
+        
+    }
 
 ;
     
@@ -45,15 +52,20 @@
 
 
 .product Button{
-    background: #f0c14b;
+    background-color: #184775;
     border: 1px solid;
     width: 150px;
     height: 30px;
     margin-top: 10px;
-    border-color: #a88734 #272318 #295484;
-    color: #575555;
-    border-radius: 2px;
+    border-color: #b88f27 #745910 #745910;
+    color:whitesmoke;
+    border-radius: 5px;
     border-color: rgb(29, 22, 13);
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color:#b88f27;
+        
+    }
     /* background:  rgb(70, 113, 243);
     border-radius: 2px;
     width: 150px;

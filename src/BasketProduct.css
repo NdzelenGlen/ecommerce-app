@@ -1,16 +1,26 @@
 .basketproduct{
     display: flex;
+    margin-top: 3px;
+    
 }
 .basketproduct_info{
     padding-left:20px
 }
 .basketproduct_info Button {
-    background: #f0c14b;
-    margin-top: 10px;
+    background-color: #184775;
+    margin-top: 15px;
     border-color: #a88734 #272318 #295484;
-    color: #575555;
+    color: whitesmoke;
     border:1px solid ;
     position: relative;
+    border-radius: 10px;
+    font-size: small;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color:#b82727;
+        
+    }
+   
     
 }
 .basketproduct_image{

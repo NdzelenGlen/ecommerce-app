@@ -1,6 +1,6 @@
 .login{
     background-color: antiquewhite;
-    height: 200vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,15 +24,17 @@
     padding: 40px
 }
 .login_container h1 {
+    align-self: center;
     font-weight: 500;
     margin-bottom: 20px;
 }
 .login_container h3 {
+    align-self: center;
     font-weight: 500;
     margin-bottom: 10px;
 }
 .login_container form h5{
-    margin_bottpm:5px;
+    margin-bottom:5px;
 
 
 }
@@ -45,13 +47,14 @@
 }
 
 .login_button{
-    background: rgb(8, 8, 173);
+    background: #184775;
     border-radius: 4px;
     width:100%;
     height:30px;
     border: 1px solid;
     margin-top: 10px;
-    border-color:#a88734 #9c7e31 #846a29
+    border-color:#a88734 #9c7e31 #846a29;
+    color:whitesmoke;
 
 }
 .login_signupmessage{

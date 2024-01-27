@@ -1,0 +1,31 @@
+.footer{
+    height: 50px;
+    align-items: center;
+    background-color: #184775;
+    margin-bottom: 0 !important;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    
+
+}
+.footer_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer_aboutourproduct{
+    color: whitesmoke;
+    align-items: center;
+    margin-top: 15px;
+    display: flex;
+    
+}
+.footer_icon{
+    height: 30px;
+    width: 30px;
+}
+.h5{
+    margin-top: 15px;
+}

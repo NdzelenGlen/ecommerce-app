@@ -5,7 +5,7 @@ import './Product.js'
 import { useStateValue } from './StatePrivider';
 function BasketProduct( {id , price , image ,title , rating }){
     
-    const [{basket}, dispatch ] = useStateValue();
+    const [{basket,user }, dispatch ] = useStateValue();
   const removeFromBasket =() => {
   dispatch({
      type: "REMOVE_FROM_BASKET",
@@ -33,7 +33,7 @@ function BasketProduct( {id , price , image ,title , rating }){
         {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
 
         </div>
-         <Button onClick={removeFromBasket}>Remove from Basket </Button>
+         <Button  onClick={removeFromBasket}>Remove from Basket </Button>
       </div>
     </div>
   )

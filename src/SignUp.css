@@ -1,6 +1,6 @@
 .signup{
     background-color: antiquewhite;
-    height: 200vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,16 +24,18 @@
     padding: 40px
 }
 .signup_container h1 {
+    align-self: center;
     font-weight: 500;
     text-wrap: wrap;
     margin-bottom: 20px;
 }
 .signup_container h3 {
+    align-self: center;
     font-weight: 500;
     margin-bottom: 10px;
 }
 .signup_container form h5{
-    margin_bottpm:5px;
+    margin-bottom:5px;
 
 
 }
@@ -45,14 +47,15 @@
     text-size-adjust: 25px;
 }
 
-.signup_button{
-    background: rgb(19, 19, 146);
+.signup_registerbutton{
+    background: #184775;
     border-radius: 4px;
     width:100%;
     height:30px;
     border: 1px solid;
     margin-top: 10px;
     border-color:#a88734 #9c7e31 #846a29; 
+    color: whitesmoke;
 
 }
 /* .signup_alerttext{
