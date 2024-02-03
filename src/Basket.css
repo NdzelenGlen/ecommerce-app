@@ -1,5 +1,7 @@
 .basket{
     display: flex;
+    height: 100%;
+    width: 100%;
     padding: 20px;
     background-color: whitesmoke;
     height: max-content;
@@ -10,7 +12,7 @@
     }
 }
 .basket_ads{
-    width: 100%;
+    width: 85%;
     margin-bottom: 10px;
 }
 .basket_title{
@@ -29,6 +31,7 @@
 
 }
 .basket_lefthandside{
+
  
 
 }

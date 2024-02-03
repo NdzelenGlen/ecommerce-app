@@ -28,8 +28,10 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 // const analytics = getAnalytics(app);
 const auth = firebase.auth();
-const firestore =firebase.firestore();
+
 
 
 
 export {db,auth};
+
+export const firestore = firebase.firestore(); 

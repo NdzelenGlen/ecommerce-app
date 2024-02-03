@@ -1,0 +1,24 @@
+.productview_bottom{
+    display: flex;
+    height: 40%;
+    
+
+}
+.productview_{
+    
+     display: flex;
+     height: 100vh;
+    
+    
+}
+.productview_buttonlineone img{
+   
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+.projectview_left .projectview_right{
+    flex: 1;
+
+}
+

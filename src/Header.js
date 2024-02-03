@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 import {ReactComponent as Basketicon} from './basket_icon.svg'
 import { Link } from 'react-router-dom'
-import { useStateValue } from './StatePrivider'
+import { useStateValue } from './StatePrivider.js'
 import {ReactComponent as SearchIcon} from './search.svg'
 import { auth } from './firebase.js'
 // remember everything commented below needs to be edited later 
@@ -39,7 +39,7 @@ function Header() {
         <Link to ={!user && '/LogIn'}>
             <div onClick={handleAuthentication} 
             className="header_option">
-               <span className='header_optionlineone'> {user?'Hi, ' : 'Welcome'}<b>{user?.name}</b> </span>
+               <span className='header_optionlineone'> {user?'Hi, ' : 'Welcome'}<b>{user?.email}</b> </span>
                 <center><span className='header_optionlinetwo'>
                     {user?'LogOut' : 'LogIn'}
                     </span></center>
@@ -48,30 +48,22 @@ function Header() {
 
         </Link>
          
-        <Link to ="/SignUp">
-             <div className="header_option">
-                <span className='header_optionlineone'>{user?'' : 'Guest?'}</span>
-                <span className='header_optionlinetwo'>{user?'' : 'SignIn'}</span>
-
-             </div>
-        </Link>
-        <Link to ="">
+        {!user && (
+          <Link to="/SignUp">
             <div className="header_option">
-                <span className='header_optionlineone'>Returns</span>
-                <span className='header_optionlinetwo'>& Orders</span>
+              <span className="header_optionlineone">Guest?</span>
+              <span className="header_optionlinetwo">SignIn</span>
+            </div>
+          </Link>
+        )}
+        <Link to ="/Orders">
+            <div className="header_option">
+                <span className='header_optionlineone'>Returns &</span>
+                <span className='header_optionlinetwo'>Orders</span>
 
              </div>
 
         </Link>  
-             
-        <Link to ="">
-            <div className="header_option">
-               <span className='header_optionlineone'>Your</span>
-                <span className='header_optionlinetwo'>Prime</span>
-
-            </div>
-
-        </Link>
             
         <Link to="/Basket">
             <div className="header_optionbasket">

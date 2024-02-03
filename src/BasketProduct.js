@@ -2,8 +2,8 @@ import React from 'react'
 import './BasketProduct.css'
 import { Button } from '@mui/material'
 import './Product.js'
-import { useStateValue } from './StatePrivider';
-function BasketProduct( {id , price , image ,title , rating }){
+import { useStateValue } from './StatePrivider.js';
+function BasketProduct( {id , price , image ,title , rating , hideButton}){
     
     const [{basket,user }, dispatch ] = useStateValue();
   const removeFromBasket =() => {
@@ -31,9 +31,13 @@ function BasketProduct( {id , price , image ,title , rating }){
         </p>
         <div className='basketproduct_rating'>
         {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
+         {!hideButton &&(
+          <Button  onClick={removeFromBasket}>Remove from Basket </Button>
+          
+         )}
 
         </div>
-         <Button  onClick={removeFromBasket}>Remove from Basket </Button>
+         
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { auth } from './firebase.js'
-import { useStateValue } from './StatePrivider';
+import { useStateValue } from './StatePrivider.js';
 import { Link } from 'react-router-dom';
 import gmailicon from './gmail.svg'
 import telegramicon from './telegram.svg'
@@ -46,7 +46,8 @@ function Footer() {
         <Link to ="/">    
             <div className='footer_aboutourproduct'>
             <h5><img className='footer_icon'
-                src={gmailicon}/>Gmail</h5>
+                src={gmailicon}
+                alt=''/>Gmail</h5>
                 
             </div>
         </Link>
@@ -54,7 +55,8 @@ function Footer() {
             <div className='footer_aboutourproduct'>
                 
                 <h5><img className='footer_icon'
-                src={telegramicon}/>Telegram</h5>
+                src={telegramicon}
+                alt=''/>Telegram</h5>
                 
             </div>
         </Link>
@@ -62,7 +64,8 @@ function Footer() {
             <div className='footer_aboutourproduct'>
                 
                  <h5><img className='footer_icon'
-                src={whatsappicon}/>Whatsapp</h5>
+                src={whatsappicon}
+                alt=''/>Whatsapp</h5>
                 
             </div>
         </Link>

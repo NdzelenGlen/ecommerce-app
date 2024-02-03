@@ -8,7 +8,7 @@
     margin: 5px;
     border-radius: 15px;
     padding: 20px;
-    width: 100%;
+    width: 85%;
     min-width: 100px;
     max-height: 400px;
     box-shadow:0 0 15px rgba(5, 5, 56, 0.3);
@@ -23,11 +23,29 @@
     
 }
 
+   
 
 .product_info{
     height: 100px;
     margin-bottom: 17px;
     
+
+}
+.product_buttonlike{
+    display: flex;
+    margin-left: 0;
+    margin-right: 5px;
+    color: green;
+    margin-bottom: 0;
+}
+.product_likebutton{
+    width: 20px;
+    height: 20px;
+    
+
+}
+.product_button{
+    display:flex;
 
 }
 .product_title{
@@ -54,12 +72,15 @@
 .product Button{
     background-color: #184775;
     border: 1px solid;
-    width: 150px;
-    height: 30px;
+    justify-content: space-evenly;
+
+    width: 100px;
+    height: 20px;
     margin-top: 10px;
     border-color: #b88f27 #745910 #745910;
     color:whitesmoke;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin: 10px;
     border-color: rgb(29, 22, 13);
     transition: background-color 0.3s ease;
     &:hover{
@@ -76,3 +97,78 @@
     color: aliceblue; */
     
 }
+.product Button{
+    background-color: #184775;
+    border: 1px solid;
+    
+
+    width: 80px;
+    height: 30px;
+    margin-top: 1px;
+    border-color: #b88f27 #745910 #745910;
+    color:whitesmoke;
+    border-radius: 8px;
+    margin: 8px;
+    border-color: rgb(29, 22, 13);
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color:#b88f27;
+        
+    }
+    /* background:  rgb(70, 113, 243);
+    border-radius: 2px;
+    width: 150px;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: bisque;
+    color: aliceblue; */
+    
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    border-color: #184775;
+    margin: 0;
+    border-radius: 15px;
+    transition: padding 0.3s ease;
+    &:hover{
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        box-shadow:0 0 100px rgba(28, 1, 77, 0.3);}
+   
+  }
+  
+  .modal-left {
+    width: 50%;
+    margin-left: 0;
+    text-align: left;
+   
+  }
+  
+  .modal-right {
+    width: 50%;
+    text-align: right;
+   
+  }
+  
+  .modal-right img {
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+  }
+  .modal-rightbottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }

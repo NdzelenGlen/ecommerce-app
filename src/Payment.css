@@ -1,5 +1,8 @@
 .payment{
     background-color: white;
+    width: 100%;
+    height: 100%;
+    align-items: center;
 
 }
 .payment_container h1{
@@ -25,6 +28,27 @@
 .payment_title{
     flex: 0.2;
 }
-.payment_address , .payment_items{
+.payment_address , .payment_items .payment_details{
     flex: 0.8;
+}
+.payment_pricecontainer{
+    align-items: center;
+    align-self: center;
+
+}
+.payment_pricecontainer button{
+    background-color: #184775;
+    color: white;
+     height: 30px;
+     width: 100px;
+     border: 2px solid;
+     border-color: rgb(216, 212, 206);
+     align-self: center;
+    border-radius: 15%;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color:rgb(96, 196, 146);
+        
+    }
+    
 }
